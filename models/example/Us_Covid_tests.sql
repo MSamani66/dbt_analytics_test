@@ -11,9 +11,7 @@
 
 with source_data as (
 
-    select 1 as id
-    union all
-    select null as id
+    select * from pc_dbt_db_raw_date.public.ct_us_covid_tests
 
 )
 
