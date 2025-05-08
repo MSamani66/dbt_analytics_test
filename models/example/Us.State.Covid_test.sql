@@ -9,7 +9,7 @@ SELECT
     SUM(negative) AS negative, 
     SUM(hospitalized) AS hospitalized,
     SUM(death) AS death
-FROM {{ source('pc_dbt_db_raw_date', 'ct_us_covid_tests') }}
+FROM {{ source('covid', 'ct_us_covid_tests') }}
 GROUP BY 
     date, province_state, iso3166_2
 ORDER BY date DESC

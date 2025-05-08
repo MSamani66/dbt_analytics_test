@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: pc_dbt_db_raw_date       # dbt source name
-    database: PC_DBT_DB          #  Add this line
+  - name: covid      # dbt source name
+    database: pc_dbt_db_raw_date          #  Add this line
     schema: public                 # Schema in your Snowflake database
     tables:
       - name: jhu_vaccines
