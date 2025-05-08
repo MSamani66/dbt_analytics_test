@@ -1,11 +1,11 @@
 version: 2
 
 sources:
-  - name: pc_dbt_db_raw_date       # Source name (used in dbt 'source' references)
-    schema: public                 # Schema where the raw tables reside
+  - name: pc_dbt_db_raw_date       # dbt source name
+    schema: public                 # Schema in your Snowflake database
     tables:
       - name: jhu_vaccines
         description: "Table containing COVID-19 vaccination data."
       - name: ct_us_covid_tests
         description: "Table containing COVID-19 test results by date."
-
+        
