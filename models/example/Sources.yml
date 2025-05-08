@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: pc_dbt_db_raw_date       # dbt source name
+    database: PC_DBT_DB          #  Add this line
+    schema: public                 # Schema in your Snowflake database
+    tables:
+      - name: jhu_vaccines
+        description: "Table containing COVID-19 vaccination data."
+      - name: ct_us_covid_tests
+        description: "Table containing COVID-19 test results by date."
+        
