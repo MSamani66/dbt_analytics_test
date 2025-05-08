@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: us_state_covid
+    description: "Aggregated COVID-19 test results by date and state."
+    columns:
+      - name: date
+        description: "Date of the reported data."
+      - name: state
+        description: "Full state name."
+      - name: st
+        description: "Two-letter state abbreviation."
+      - name: positive
+        description: "Total positive COVID-19 cases."
+      - name: prio_positive
+        description: "New positive cases compared to previous day."
+      - name: negative
+        description: "Total negative test results."
+      - name: hospitalized
+        description: "Total number of hospitalizations."
+      - name: death
+        description: "Total number of deaths."
+
+  - name: us_state_vaccinate
+    description: "Total vaccine doses allocated to each U.S. state by manufacturer."
+    columns:
+      - name: state
+        description: "Full state name."
+      - name: st
+        description: "Two-letter state abbreviation."
+      - name: total_dose
+        description: "Total vaccine doses allocated."
+      - name: total_alloc_moderna
+        description: "Total Moderna vaccine doses allocated."
+      - name: total_alloc_pfizer
+        description: "Total Pfizer vaccine doses allocated."
+      - name: total_alloc_johnson
+        description: "Total Johnson & Johnson vaccine doses allocated."
+
+  - name: us_state_summary
+    description: "Merged summary of COVID cases and vaccine allocations per state."
+    columns:
+      - name: state
+        description: "Full state name."
+      - name: st
+        description: "Two-letter state abbreviation."
+      - name: positive
+        description: "Sum of total positive cases."
+      - name: negative
+        description: "Sum of total negative cases."
+      - name: hospitalized
+        description: "Sum of hospitalizations."
+      - name: death
+        description: "Sum of deaths."
+      - name: total_vaccinated
+        description: "Sum of total vaccine doses allocated."
+      - name: total_moderna
+        description: "Sum of Moderna doses allocated."
+      - name: total_pfizer
+        description: "Sum of Pfizer doses allocated."
